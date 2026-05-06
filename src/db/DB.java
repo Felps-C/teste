@@ -26,6 +26,15 @@ public class DB {
         }
         return conn;
     }
+    public static void closeConection(){
+        if (conn != null){
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e.getMessage());
+            }
+        }
+    }
 
     public static Properties loadPropiets(){
 
@@ -36,6 +45,5 @@ public class DB {
         } catch (IOException e) {
             throw new DBException(e.getMessage());
         }
-
     }
 }
