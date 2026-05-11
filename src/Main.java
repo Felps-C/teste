@@ -20,7 +20,8 @@ public class Main {
             rs = st.executeQuery("select * from department");
 
             while (rs.next()){
-                System.out.println(rs.getInt("Id")+ " - " +rs.getString("Name"));
+                System.out.println(rs.getInt("Id"
+                        )+ " - " +rs.getString("Name"));
             }
 
         } catch (SQLException e) {
